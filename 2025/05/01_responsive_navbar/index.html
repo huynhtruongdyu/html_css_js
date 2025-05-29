@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 300px 1fr;
+        grid-template-areas:
+          "navbar navbar"
+          "sidebar main"
+          "sidebar footer";
+        min-height: 100vh;
+      }
+      nav {
+        position: sticky;
+        top: 0;
+        grid-area: navbar;
+        background-color: blue;
+        height: 50px;
+      }
+      aside {
+        position: sticky;
+        top: 50px;
+        grid-area: sidebar;
+        align-self: start;
+        background-color: red;
+        height: calc(100vh - 50px);
+      }
+      main {
+        grid-area: main;
+      }
+      footer {
+        grid-area: footer;
+        background-color: black;
+        height: 50px;
+        color: white;
+      }
+
+      .show {
+        display: block;
+      }
+      @media screen and (max-width: 800px) {
+        body {
+          grid-template-columns: 1fr;
+        }
+        aside {
+          display: none;
+          position: fixed;
+          width: 300px;
+        }
+      }
+    </style>
+    
+  </head>
+  <body>
+    <nav>
+      <button onclick="toggleSidebar()">hehe</button>
+      <span>nav</span>
+    </nav>
+    <aside id="sidebar">sidebar</aside>
+    <main>
+      <h1>hello wolrd</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam rem
+        deserunt in eaque omnis perspiciatis maiores inventore ullam velit,
+        repudiandae, impedit saepe sint ratione nulla ut consequatur assumenda
+        iure dolores?
+      </p>
+      <h1>hello wolrd</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam rem
+        deserunt in eaque omnis perspiciatis maiores inventore ullam velit,
+        repudiandae, impedit saepe sint ratione nulla ut consequatur assumenda
+        iure dolores?
+      </p>
+      <h1>hello wolrd</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam rem
+        deserunt in eaque omnis perspiciatis maiores inventore ullam velit,
+        repudiandae, impedit saepe sint ratione nulla ut consequatur assumenda
+        iure dolores?
+      </p>
+      <h1>hello wolrd</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam rem
+        deserunt in eaque omnis perspiciatis maiores inventore ullam velit,
+        repudiandae, impedit saepe sint ratione nulla ut consequatur assumenda
+        iure dolores?
+      </p>
+      <h1>hello wolrd</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam rem
+        deserunt in eaque omnis perspiciatis maiores inventore ullam velit,
+        repudiandae, impedit saepe sint ratione nulla ut consequatur assumenda
+        iure dolores?
+      </p>
+      <h1>hello wolrd</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam rem
+        deserunt in eaque omnis perspiciatis maiores inventore ullam velit,
+        repudiandae, impedit saepe sint ratione nulla ut consequatur assumenda
+        iure dolores?
+      </p>
+      <h1>hello wolrd</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam rem
+        deserunt in eaque omnis perspiciatis maiores inventore ullam velit,
+        repudiandae, impedit saepe sint ratione nulla ut consequatur assumenda
+        iure dolores?
+      </p>
+      <h1>hello wolrd</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam rem
+        deserunt in eaque omnis perspiciatis maiores inventore ullam velit,
+        repudiandae, impedit saepe sint ratione nulla ut consequatur assumenda
+        iure dolores?
+      </p>
+      <h1>hello wolrd</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam rem
+        deserunt in eaque omnis perspiciatis maiores inventore ullam velit,
+        repudiandae, impedit saepe sint ratione nulla ut consequatur assumenda
+        iure dolores?
+      </p>
+      <h1>hello wolrd</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam rem
+        deserunt in eaque omnis perspiciatis maiores inventore ullam velit,
+        repudiandae, impedit saepe sint ratione nulla ut consequatur assumenda
+        iure dolores?
+      </p>
+      <h1>hello wolrd</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam rem
+        deserunt in eaque omnis perspiciatis maiores inventore ullam velit,
+        repudiandae, impedit saepe sint ratione nulla ut consequatur assumenda
+        iure dolores?
+      </p>
+      <h1>hello wolrd</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam rem
+        deserunt in eaque omnis perspiciatis maiores inventore ullam velit,
+        repudiandae, impedit saepe sint ratione nulla ut consequatur assumenda
+        iure dolores?
+      </p>
+      <h1>hello wolrd</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam rem
+        deserunt in eaque omnis perspiciatis maiores inventore ullam velit,
+        repudiandae, impedit saepe sint ratione nulla ut consequatur assumenda
+        iure dolores?
+      </p>
+      <h1>hello wolrd</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam rem
+        deserunt in eaque omnis perspiciatis maiores inventore ullam velit,
+        repudiandae, impedit saepe sint ratione nulla ut consequatur assumenda
+        iure dolores?
+      </p>
+      <h1>hello wolrd</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam rem
+        deserunt in eaque omnis perspiciatis maiores inventore ullam velit,
+        repudiandae, impedit saepe sint ratione nulla ut consequatur assumenda
+        iure dolores?
+      </p>
+      <h1>hello wolrd</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam rem
+        deserunt in eaque omnis perspiciatis maiores inventore ullam velit,
+        repudiandae, impedit saepe sint ratione nulla ut consequatur assumenda
+        iure dolores?
+      </p>
+      <h1>hello wolrd</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam rem
+        deserunt in eaque omnis perspiciatis maiores inventore ullam velit,
+        repudiandae, impedit saepe sint ratione nulla ut consequatur assumenda
+        iure dolores?
+      </p>
+      <h1>hello wolrd</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam rem
+        deserunt in eaque omnis perspiciatis maiores inventore ullam velit,
+        repudiandae, impedit saepe sint ratione nulla ut consequatur assumenda
+        iure dolores?
+      </p>
+      <h1>hello wolrd</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam rem
+        deserunt in eaque omnis perspiciatis maiores inventore ullam velit,
+        repudiandae, impedit saepe sint ratione nulla ut consequatur assumenda
+        iure dolores?
+      </p>
+    </main>
+    <footer>footer</footer>
+    <script type="text/javascript" defer>
+      const sidebarEl = document.getElementById("sidebar");
+      function toggleSidebar() {
+        sidebarEl.classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>
