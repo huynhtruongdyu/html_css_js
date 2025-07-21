@@ -20,39 +20,35 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function ValidateSerial(form) {
-    try {
-      const $serialInput = $(form).find("input[name='Serial']");
-      if ($serialInput.length === 0) return true;
+    const $serialInput = $(form).find("input[name='Serial']");
+    if ($serialInput.length === 0) return true;
 
-      const inputEl = $serialInput[0];
-      const value = inputEl.value.trim();
-      const invalidEmptyFeedback = inputEl.nextElementSibling;
-      invalidEmptyFeedback.style.display = "none";
+    const inputEl = $serialInput[0];
+    const value = inputEl.value.trim();
+    const $invalidEmptyFeedback = $serialInput.next();
+    $invalidEmptyFeedback.hide();
 
-      if (!value) {
-        invalidEmptyFeedback.style.display = "block";
-        inputEl.setCustomValidity(""); // native `required` handle empty case
-        return true;
-      }
-
-      if (value.length !== 15) {
-        inputEl.setCustomValidity("error");
-        return false;
-      }
-
-      const validPrefixes = ["E835", "E836", "E837"];
-      const isValid = validPrefixes.some((prefix) => value.startsWith(prefix));
-
-      if (!isValid) {
-        inputEl.setCustomValidity("error");
-        return false;
-      }
-
-      inputEl.setCustomValidity("");
+    if (!value) {
+      $invalidEmptyFeedback.show();
+      inputEl.setCustomValidity(""); // native `required` handle empty case
       return true;
-    } catch (e) {
-      console.error(e);
     }
+
+    if (value.length !== 15) {
+      inputEl.setCustomValidity("error");
+      return false;
+    }
+
+    const validPrefixes = ["E835", "E836", "E837"];
+    const isValid = validPrefixes.some((prefix) => value.startsWith(prefix));
+
+    if (!isValid) {
+      inputEl.setCustomValidity("error");
+      return false;
+    }
+
+    inputEl.setCustomValidity("");
+    return true;
   }
 
   function onValidate(form) {
